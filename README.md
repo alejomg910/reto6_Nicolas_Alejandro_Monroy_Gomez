@@ -62,7 +62,20 @@ flowchart TD
 
 ```
 
-3.  Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado
+3.  Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado.
+```mermaid
+flowchart TD
+    n1["&lt;bloque_previo&gt;"] --> n2["Ingresa un numero entero:"]
+    n2 --> n3["n &gt; 2"]
+    n3 --> n4["print (n - 1)"] & n6["&lt;bloque_sigui&gt;"]
+    n4 --> n5["n = n -1"]
+    n5 --> n3
+
+    n1@{ shape: rounded}
+    n3@{ shape: diam}
+    n6@{ shape: rounded}
+
+```
 4. Imprimir el factorial de un número natural n dado.
 5. Implementar un programa que ingrese un número de 2 a 50 y muestre sus divisores.
 6. Implementar el algoritmo que muestre los números primos del 1 al 100. **Nota:** use funciones
