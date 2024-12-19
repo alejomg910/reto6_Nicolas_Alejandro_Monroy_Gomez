@@ -1,11 +1,30 @@
 # reto6_Nicolas_Alejandro_Monroy_Gomez
 
 ## Reto 6
-Desarrolle de manera **individual** la mayoría de ejercicios en clase. Para cada punto cree un programa individual asimismo cree un notebook con la solución a todos los problemas. Al finalizar suba todo a un repo y subalo al canal reto_6 en slack, los tres primeros puntos deben incluir diagrama de flujo.
+Para este reto 6 hay que desarrollar estos 6 puntos en un notebook de python, el cual estará adjuntado en este repo. Los 3 primeros puntos deben tener diagramas de flujo y además, el código debe ir debidamente documentado.
 
-**Nota:** Todo el código de aquí en adelante debe ir debidamente documentado.
 
 1. Imprimir un listado con los números del 1 al 100 cada uno con su respectivo cuadrado.
+``` mermaid
+flowchart TD
+ subgraph extra_block[" "]
+    direction TB
+        n9["&lt;bloque_sig&gt;"]
+  end
+    n1["Inicio"] --> n2["n = 1"]
+    n2 --> n3["n &lt;= 100?"]
+    n3 -- V --> n4["n ^ 2"]
+    n4 --> n5["n = n + 1"]
+    n5 --> n3
+    n3 -- F --> n9
+    n10["&lt;bloque_prev&gt;"] --> n1
+
+    n9@{ shape: rounded}
+    n10@{ shape: rounded}
+    style extra_block stroke:none
+```
+
+
 2.  Imprimir un listado con los números impares desde 1 hasta 999 y seguidamente otro listado con los números pares desde 2 hasta 1000.
 3.  Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado
 4. Imprimir el factorial de un número natural n dado.
