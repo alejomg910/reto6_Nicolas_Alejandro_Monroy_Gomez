@@ -49,9 +49,10 @@ flowchart TD
     n11["&lt;bloque_prev&gt;"] --> n12["inicio"]
     n12 --> n13["n = 1"]
     n13 --> n14["n &lt;= 500"]
-    n14 --> n15["print (2 * n)"] & n17
+    n14 -- V --> n15["print (2 * n)"]
     n15 --> n16["n = n + 1"]
-    n16 -- F --> n14
+    n16 --> n14
+    n14 -- F --> n17
     n9@{ shape: rounded}
     n3@{ shape: diam}
     n10@{ shape: rounded}
@@ -60,6 +61,7 @@ flowchart TD
     style extra_block stroke:none
     style s1 stroke:none
 
+
 ```
 
 3.  Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado.
@@ -67,7 +69,8 @@ flowchart TD
 flowchart TD
     n1["&lt;bloque_previo&gt;"] --> n2["Ingresa un numero entero:"]
     n2 --> n3["n &gt; 2"]
-    n3 --> n4["print (n - 1)"] & n6["&lt;bloque_sigui&gt;"]
+    n3 -- V --> n4["print (n - 1)"]
+    n3 -- F --> n6["&lt;bloque_sigui&gt;"]
     n4 --> n5["n = n -1"]
     n5 --> n3
 
